@@ -1,0 +1,17 @@
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\bin\Release\Highlighter.dll
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\bin\Release\Highlighter.pdb
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\bin\Release\Highlighter.pkgdef
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\bin\Release\Highlighter.vsix
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\bin\Release\extension.vsixmanifest
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\Highlighter.csproj.AssemblyReference.cache
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\_EmptyResource.resources
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\Highlighter.csproj.GenerateResource.cache
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\Highlighter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\Highlighter.csproj.CoreCompileInputs.cache
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\Highlighter.dll
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\Highlighter.pdb
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\Highlighter.pkgdef
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\Highlighter.latest.pkgdef
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\extension.vsixmanifest
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\files.json
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\createTemplateManifests.cache

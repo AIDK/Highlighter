@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj": {}
+  },
+  "projects": {
+    "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj",
+        "projectName": "Highlighter",
+        "projectPath": "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj",
+        "packagesPath": "C:\\Users\\andriesd\\.nuget\\packages\\",
+        "outputPath": "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\andriesd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://nuget.cashpos.co.za/nuget": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.VSSDK.BuildTools": {
+              "target": "Package",
+              "version": "[17.8.2365, )"
+            },
+            "Microsoft.VisualStudio.SDK": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[17.0.32112.339, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}
