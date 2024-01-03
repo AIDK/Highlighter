@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KrO6jc7Tb9DcP1Myov/7xD5myo3Ik1SBmsj5kACAN988yZ+oXvxHsTot37iv16FBwt7Bjr2WqIrnt07y7JSnlw==",
+  "dgSpecHash": "5hnF+VWX201RoZ2eqXmnJ7atOFDA/7nqf0tlBEEqIKBB+jy02Kjy0gWB52HtFZHU0DkU/S7q+y0zb6u5MacsJA==",
   "success": true,
   "projectFilePath": "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj",
   "expectedPackageFiles": [
@@ -93,6 +93,9 @@
     "C:\\Users\\andriesd\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\andriesd\\.nuget\\packages\\nerdbank.streams\\2.6.81\\nerdbank.streams.2.6.81.nupkg.sha512",
     "C:\\Users\\andriesd\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\andriesd\\.nuget\\packages\\runtime.any.system.io\\4.3.0\\runtime.any.system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\andriesd\\.nuget\\packages\\runtime.any.system.runtime\\4.3.0\\runtime.any.system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\andriesd\\.nuget\\packages\\runtime.win.microsoft.win32.primitives\\4.3.0\\runtime.win.microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\andriesd\\.nuget\\packages\\stdole\\17.0.32112.339\\stdole.17.0.32112.339.nupkg.sha512",
     "C:\\Users\\andriesd\\.nuget\\packages\\streamjsonrpc\\2.8.28\\streamjsonrpc.2.8.28.nupkg.sha512",
     "C:\\Users\\andriesd\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
