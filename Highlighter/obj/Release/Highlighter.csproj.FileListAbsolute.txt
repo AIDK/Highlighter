@@ -15,3 +15,4 @@ C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighte
 C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\extension.vsixmanifest
 C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\files.json
 C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Release\createTemplateManifests.cache
+C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\bin\Release\icon.ico
