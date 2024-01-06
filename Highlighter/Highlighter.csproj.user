@@ -3,4 +3,9 @@
   <PropertyGroup>
     <ExtensibilityEssentialsInstalled>true</ExtensibilityEssentialsInstalled>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartProgram>C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\devenv.exe</StartProgram>
+    <DeployTargetInstanceId>
+    </DeployTargetInstanceId>
+  </PropertyGroup>
 </Project>
