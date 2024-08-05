@@ -4,9 +4,11 @@ This extension will highlight a predefined set of keywords in comments such as:
 * TODO
 * BUG
 * NOTE 
-* IDEA
+* DISCUSS
 * OPTIMIZE
-* FIX
+* FIXME
+* STEP
+* IMPORTANT
 
 #### Screenshots
 ![Highlighter](image.png)
