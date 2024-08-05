@@ -16,7 +16,7 @@ namespace Highlighter
 
         [Export(typeof(ClassificationTypeDefinition))]
         [Name(Consts._classificationTypeNameFix)]
-        private static readonly ClassificationTypeDefinition Definition_Comment_Fix;
+        private static readonly ClassificationTypeDefinition Definition_Comment_FixMe;
 
         [Export(typeof(ClassificationTypeDefinition))]
         [Name(Consts._classificationTypeNameNote)]
@@ -27,7 +27,15 @@ namespace Highlighter
         private static readonly ClassificationTypeDefinition Definition_Comment_Optimize;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameIdea)]
-        private static readonly ClassificationTypeDefinition Definition_Comment_Idea;
+        [Name(Consts._classificationTypeNameDiscuss)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Discuss;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameStep)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Step;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameImportant)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Important;
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj": {}
+    "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\Highlighter.csproj": {}
   },
   "projects": {
-    "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj": {
+    "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\Highlighter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj",
+        "projectUniqueName": "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\Highlighter.csproj",
         "projectName": "Highlighter",
-        "projectPath": "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj",
+        "projectPath": "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\Highlighter.csproj",
         "packagesPath": "C:\\Users\\andriesd\\.nuget\\packages\\",
-        "outputPath": "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\obj\\",
+        "outputPath": "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -30,6 +30,11 @@
           "net472": {
             "projectReferences": {}
           }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
