@@ -15,8 +15,7 @@ namespace Highlighter
         {
             foreach (var prefix in prefixes)
             {
-                if (Contains(prefix))
-                    continue;
+                if (Contains(prefix)) continue;
 
                 _prefixes.Add(prefix);
             }
@@ -24,30 +23,17 @@ namespace Highlighter
 
         public static void Remove(string prefix)
         {
-            if (!Contains(prefix))
-                return;
+            if (!Contains(prefix)) return;
 
             _prefixes.Remove(prefix);
         }
 
         public static int Count => _prefixes.Count;
 
-        public static string GetPrefix(int index) =>
-            _prefixes[index];
+        public static string GetPrefix(int index) => _prefixes[index];
 
-        public static bool Contains(string prefix) =>
-            _prefixes.Contains(prefix);
+        public static bool Contains(string prefix) => _prefixes.Contains(prefix);
 
-        private static void InitDefaults()
-        {
-            /*
-             *  TODO
-             *  BUG
-             *  NOTE
-             *  IDEA
-             *  OPTIMIZE
-             */
-            Add("todo", "bug", "fix", "note", "optimize", "idea");
-        }
+        private static void InitDefaults() => Add("todo", "bug", "fixme", "note", "optimize", "discuss", "step", "important");
     }
 }

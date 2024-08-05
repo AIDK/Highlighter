@@ -12,10 +12,12 @@ namespace Highlighter
         private readonly IClassifier _classifier;
         private readonly IClassificationType _comment_Bug;
         private readonly IClassificationType _comment_Fix;
-        private readonly IClassificationType _comment_Idea;
+        private readonly IClassificationType _comment_Discuss;
         private readonly IClassificationType _comment_Note;
         private readonly IClassificationType _comment_Optimize;
         private readonly IClassificationType _comment_Todo;
+        private readonly IClassificationType _comment_Step;
+        private readonly IClassificationType _comment_Important;
         private readonly string _pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
         private bool _isClassificationRunning;
 
@@ -29,7 +31,9 @@ namespace Highlighter
             _comment_Fix = registry.GetClassificationType(Consts._classificationTypeNameFix);
             _comment_Note = registry.GetClassificationType(Consts._classificationTypeNameNote);
             _comment_Optimize = registry.GetClassificationType(Consts._classificationTypeNameOptimize);
-            _comment_Idea = registry.GetClassificationType(Consts._classificationTypeNameIdea);
+            _comment_Discuss = registry.GetClassificationType(Consts._classificationTypeNameDiscuss);
+            _comment_Step = registry.GetClassificationType(Consts._classificationTypeNameStep);
+            _comment_Important = registry.GetClassificationType(Consts._classificationTypeNameImportant);
         }
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
@@ -142,7 +146,7 @@ namespace Highlighter
                 case "bug":
                     return _comment_Bug;
 
-                case "fix":
+                case "fixme":
                     return _comment_Fix;
 
                 case "note":
@@ -151,8 +155,14 @@ namespace Highlighter
                 case "optimize":
                     return _comment_Optimize;
 
-                case "idea":
-                    return _comment_Idea;
+                case "discuss":
+                    return _comment_Discuss;
+
+                case "step":
+                    return _comment_Step;
+
+                case "important":
+                    return _comment_Important;
 
                 default:
                     return _comment_Todo;

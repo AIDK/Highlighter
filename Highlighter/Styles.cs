@@ -57,7 +57,7 @@ namespace Highlighter
     {
         public FormatCommentFix()
         {
-            DisplayName = "Fix Comment";
+            DisplayName = "FixMe Comment";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
@@ -87,8 +87,8 @@ namespace Highlighter
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameIdea)]
-    [Name(Consts._classificationTypeNameIdea)]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameDiscuss)]
+    [Name(Consts._classificationTypeNameDiscuss)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -97,11 +97,11 @@ namespace Highlighter
     {
         public FormatCommentIdea()
         {
-            DisplayName = "Idea Comment";
+            DisplayName = "Discuss Comment";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._idea);
+            BackgroundBrush = new SolidColorBrush(Consts.Colors._discuss);
             IsBold = false;
         }
     }
@@ -122,6 +122,46 @@ namespace Highlighter
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
             BackgroundBrush = new SolidColorBrush(Consts.Colors._optimize);
+            IsBold = false;
+        }
+    }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameStep)]
+    [Name(Consts._classificationTypeNameStep)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    internal sealed class FormatCommentStep : ClassificationFormatDefinition
+    {
+        public FormatCommentStep ()
+        {
+            DisplayName = "Step Comment";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundBrush = new SolidColorBrush(Consts.Colors._step);
+            IsBold = false;
+        }
+    }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameImportant)]
+    [Name(Consts._classificationTypeNameImportant)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    internal sealed class FormatCommentImportant : ClassificationFormatDefinition
+    {
+        public FormatCommentImportant()
+        {
+            DisplayName = "Important Comment";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundBrush = new SolidColorBrush(Consts.Colors._important);
             IsBold = false;
         }
     }

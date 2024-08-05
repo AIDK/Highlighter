@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5hnF+VWX201RoZ2eqXmnJ7atOFDA/7nqf0tlBEEqIKBB+jy02Kjy0gWB52HtFZHU0DkU/S7q+y0zb6u5MacsJA==",
+  "dgSpecHash": "TFh557D1X+/ipCuXRlF89Y8kqP7RefWtRzAfq2Ez4r9NamkkbYi7ZP3vyKY6F4F3P/e0SSKeXwSBHkPVSj8bJQ==",
   "success": true,
-  "projectFilePath": "C:\\Repository\\Other\\Personal\\Projects\\VS Extension\\Todov2\\Highlighter\\Highlighter\\Highlighter.csproj",
+  "projectFilePath": "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\Highlighter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andriesd\\.nuget\\packages\\envdte\\17.0.32112.339\\envdte.17.0.32112.339.nupkg.sha512",
     "C:\\Users\\andriesd\\.nuget\\packages\\envdte100\\17.0.32112.339\\envdte100.17.0.32112.339.nupkg.sha512",
