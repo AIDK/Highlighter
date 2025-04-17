@@ -1,6 +1,10 @@
-## Highlighter v1.0
+## Highlighter v1.0.5
 
-This extension will highlight a predefined set of keywords in comments such as:
+## Languages
+* C#
+* C/C++
+
+## Keywords
 * TODO
 * BUG
 * NOTE 
@@ -10,5 +14,11 @@ This extension will highlight a predefined set of keywords in comments such as:
 * STEP
 * IMPORTANT
 
-#### Screenshots
+## Visual Studio Version
+* 2022
+ 
+## Screenshots
 ![Highlighter](image.png)
+
+## Credit
+Credit to: [HumanGamer](https://github.com/HumanGamer) for all the heavy lifting
