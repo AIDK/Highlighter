@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TFh557D1X+/ipCuXRlF89Y8kqP7RefWtRzAfq2Ez4r9NamkkbYi7ZP3vyKY6F4F3P/e0SSKeXwSBHkPVSj8bJQ==",
+  "dgSpecHash": "38U//0G6uUc=",
   "success": true,
-  "projectFilePath": "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\Highlighter.csproj",
+  "projectFilePath": "C:\\Repository\\other\\highlighter\\Highlighter\\Highlighter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andriesd\\.nuget\\packages\\envdte\\17.0.32112.339\\envdte.17.0.32112.339.nupkg.sha512",
     "C:\\Users\\andriesd\\.nuget\\packages\\envdte100\\17.0.32112.339\\envdte100.17.0.32112.339.nupkg.sha512",

@@ -13692,20 +13692,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andriesd\\.nuget\\packages\\": {}
+    "C:\\Users\\andriesd\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\Highlighter.csproj",
+      "projectUniqueName": "C:\\Repository\\other\\highlighter\\Highlighter\\Highlighter.csproj",
       "projectName": "Highlighter",
-      "projectPath": "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\Highlighter.csproj",
+      "projectPath": "C:\\Repository\\other\\highlighter\\Highlighter\\Highlighter.csproj",
       "packagesPath": "C:\\Users\\andriesd\\.nuget\\packages\\",
-      "outputPath": "C:\\Repository\\Other\\Personal\\Projects\\highlighter\\Highlighter\\obj\\",
+      "outputPath": "C:\\Repository\\other\\highlighter\\Highlighter\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\andriesd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13713,8 +13719,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://nuget.cashpos.co.za/nuget": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.cashpos.co.za/nuget": {}
       },
       "frameworks": {
         "net472": {
@@ -13733,15 +13739,6 @@
           "Microsoft.VSSDK.BuildTools": {
             "target": "Package",
             "version": "[17.8.2365, )"
-          },
-          "Microsoft.VSSDK.BuildTools": {
-            "target": "Package",
-            "version": "[17.8.2365, )"
-          },
-          "Microsoft.VisualStudio.SDK": {
-            "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "target": "Package",
-            "version": "[17.0.32112.339, )"
           },
           "Microsoft.VisualStudio.SDK": {
             "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
