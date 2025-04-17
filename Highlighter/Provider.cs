@@ -5,7 +5,7 @@ using System.ComponentModel.Composition;
 
 namespace Highlighter
 {
-    [Export(typeof(IClassifierProvider)), ContentType("CSharp")]
+    [Export(typeof(IClassifierProvider)), ContentType("CSharp"), ContentType("C/C++")]
     internal sealed class Provider : IClassifierProvider
     {
         [Import]
