@@ -95,6 +95,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+*.licx
 
 # Chutzpah Test files
 _Chutzpah*
@@ -353,3 +354,4 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/visualstudio
+CashPosUI/Properties/licenses.licx

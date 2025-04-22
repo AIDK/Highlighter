@@ -1,0 +1,122 @@
+# Top-most EditorConfig file
+root = true
+
+# All C# files
+[*.cs]
+
+######################
+# Formatting rules
+######################
+
+# Use four spaces for indentation
+indent_style = space
+indent_size = 4
+
+# Use UTF-8 encoding
+charset = utf-8
+
+# Use Windows line endings
+end_of_line = crlf
+
+# Add final newline at the end of files
+insert_final_newline = true
+
+##########################
+# C# code style: Formatting
+##########################
+
+# Use file-scoped namespaces
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+# Prefer expression-bodied members where appropriate
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_constructors = when_on_single_line:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion
+csharp_style_expression_bodied_operators = when_on_single_line:suggestion
+csharp_style_expression_bodied_indexers = when_on_single_line:suggestion
+csharp_style_expression_bodied_accessors = when_on_single_line:suggestion
+
+# Prefer var when the type is apparent
+csharp_style_var_when_type_is_apparent = true:suggestion
+
+# Prefer var when the type is not apparent
+csharp_style_var_elsewhere = false:suggestion
+
+# Prefer explicit tuple names
+dotnet_style_explicit_tuple_names = true:suggestion
+
+# Prefer 'is not null' pattern
+csharp_style_prefer_is_not_expression = true:suggestion
+
+# Prefer conditional delegate call
+csharp_style_conditional_delegate_call = true:suggestion
+
+# Prefer simplified 'default' expressions (e.g., `default` instead of `default(int)`)
+csharp_style_prefer_simple_default_expression = true:suggestion
+
+# Prefer interpolated strings
+csharp_style_prefer_interpolated_string = true:suggestion
+
+# Prefer pattern matching
+csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
+csharp_style_prefer_pattern_matching = true:suggestion
+
+# Use 'this.' qualifier for instance members
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion
+
+##################################
+# Naming rules - Microsoft style
+##################################
+
+# camelCase for private and internal fields (no underscore prefix)
+dotnet_naming_rule.private_fields_should_be_camel_case.severity = suggestion
+dotnet_naming_rule.private_fields_should_be_camel_case.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camel_case.style = camel_case_style
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private, internal
+dotnet_naming_symbols.private_fields.required_modifiers = 
+
+dotnet_naming_style.camel_case_style.capitalization = camel_case
+dotnet_naming_style.camel_case_style.required_prefix = 
+dotnet_naming_style.camel_case_style.required_suffix = 
+
+# PascalCase for public members
+dotnet_naming_rule.public_members_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.public_members_should_be_pascal_case.symbols = public_members
+dotnet_naming_rule.public_members_should_be_pascal_case.style = pascal_case_style
+
+dotnet_naming_symbols.public_members.applicable_accessibilities = public
+dotnet_naming_symbols.public_members.applicable_kinds = property, method, field, event
+dotnet_naming_symbols.public_members.required_modifiers = 
+
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+dotnet_naming_style.pascal_case_style.required_prefix = 
+dotnet_naming_style.pascal_case_style.required_suffix = 
+
+########################################
+# Organize using directives
+########################################
+
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+
+########################################
+# File layout preferences
+########################################
+
+# New line preferences
+csharp_new_line_before_open_brace = all:true
+csharp_new_line_between_query_expression_clauses = true
+
+# Blank lines
+csharp_preserve_single_line_blocks = true
+csharp_preserve_single_line_statements = true
+
+# Preferred modifier order (public before static etc.)
+csharp_preferred_modifier_order = public, protected, private, internal, static, extern, new, virtual, abstract, override, sealed, readonly, unsafe, volatile, async
+

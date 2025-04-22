@@ -15,3 +15,22 @@ C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighte
 C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Debug\extension.vsixmanifest
 C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Debug\files.json
 C:\Repository\Other\Personal\Projects\VS Extension\Todov2\Highlighter\Highlighter\obj\Debug\createTemplateManifests.cache
+C:\Repository\other\highlighter\Highlighter\bin\Debug\icon.ico
+C:\Repository\other\highlighter\Highlighter\bin\Debug\icon.png
+C:\Repository\other\highlighter\Highlighter\bin\Debug\Highlighter.dll
+C:\Repository\other\highlighter\Highlighter\bin\Debug\Highlighter.pdb
+C:\Repository\other\highlighter\Highlighter\bin\Debug\Highlighter.pkgdef
+C:\Repository\other\highlighter\Highlighter\bin\Debug\Highlighter.vsix
+C:\Repository\other\highlighter\Highlighter\bin\Debug\extension.vsixmanifest
+C:\Repository\other\highlighter\Highlighter\obj\Debug\Highlighter.csproj.AssemblyReference.cache
+C:\Repository\other\highlighter\Highlighter\obj\Debug\_EmptyResource.resources
+C:\Repository\other\highlighter\Highlighter\obj\Debug\Highlighter.csproj.GenerateResource.cache
+C:\Repository\other\highlighter\Highlighter\obj\Debug\Highlighter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repository\other\highlighter\Highlighter\obj\Debug\Highlighter.csproj.CoreCompileInputs.cache
+C:\Repository\other\highlighter\Highlighter\obj\Debug\Highlighter.dll
+C:\Repository\other\highlighter\Highlighter\obj\Debug\Highlighter.pdb
+C:\Repository\other\highlighter\Highlighter\obj\Debug\Highlighter.pkgdef
+C:\Repository\other\highlighter\Highlighter\obj\Debug\Highlighter.latest.pkgdef
+C:\Repository\other\highlighter\Highlighter\obj\Debug\extension.vsixmanifest
+C:\Repository\other\highlighter\Highlighter\obj\Debug\files.json
+C:\Repository\other\highlighter\Highlighter\obj\Debug\createTemplateManifests.cache

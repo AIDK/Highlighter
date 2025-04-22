@@ -1,8 +1,7 @@
-﻿using Microsoft.VisualStudio.Language.StandardClassification;
+using Microsoft.VisualStudio.Language.StandardClassification;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 using System.ComponentModel.Composition;
-using System.Windows.Media;
 
 namespace Highlighter
 {
@@ -13,15 +12,17 @@ namespace Highlighter
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
     internal sealed class FormatCommentTodo : ClassificationFormatDefinition
     {
         public FormatCommentTodo()
         {
-            DisplayName = "Todo Comment";
+            DisplayName = "Highlighter - TODO";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._todo);
+            BackgroundColor = Consts.Colors._todo;
+            BackgroundCustomizable = true;
             IsBold = false;
         }
     }
@@ -33,15 +34,18 @@ namespace Highlighter
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
+
     internal sealed class FormatCommentBug : ClassificationFormatDefinition
     {
         public FormatCommentBug()
         {
-            DisplayName = "Bug Comment";
+            DisplayName = "Highlighter - BUG";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._bug);
+            BackgroundColor = Consts.Colors._bug;
+            BackgroundCustomizable = true;
             IsBold = false;
         }
     }
@@ -53,15 +57,17 @@ namespace Highlighter
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
     internal sealed class FormatCommentFix : ClassificationFormatDefinition
     {
         public FormatCommentFix()
         {
-            DisplayName = "FixMe Comment";
+            DisplayName = "Highlighter - FIXME";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._fix);
+            BackgroundColor = Consts.Colors._fix;
+            BackgroundCustomizable = true;
             IsBold = false;
         }
     }
@@ -73,15 +79,17 @@ namespace Highlighter
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
     internal sealed class FormatCommentNote : ClassificationFormatDefinition
     {
         public FormatCommentNote()
         {
-            DisplayName = "Note Comment";
+            DisplayName = "Highlighter - NOTE";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._note);
+            BackgroundColor = Consts.Colors._note;
+            BackgroundCustomizable = true;
             IsBold = false;
         }
     }
@@ -93,15 +101,17 @@ namespace Highlighter
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
     internal sealed class FormatCommentIdea : ClassificationFormatDefinition
     {
         public FormatCommentIdea()
         {
-            DisplayName = "Discuss Comment";
+            DisplayName = "Highlighter - DISCUSS";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._discuss);
+            BackgroundColor = Consts.Colors._discuss;
+            BackgroundCustomizable = true;
             IsBold = false;
         }
     }
@@ -113,15 +123,17 @@ namespace Highlighter
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
     internal sealed class FormatCommentOptimize : ClassificationFormatDefinition
     {
         public FormatCommentOptimize()
         {
-            DisplayName = "Optimize Comment";
+            DisplayName = "Highlighter - OPTIMIZE";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._optimize);
+            BackgroundColor = Consts.Colors._optimize;
+            BackgroundCustomizable = true;
             IsBold = false;
         }
     }
@@ -133,15 +145,17 @@ namespace Highlighter
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
     internal sealed class FormatCommentStep : ClassificationFormatDefinition
     {
         public FormatCommentStep ()
         {
-            DisplayName = "Step Comment";
+            DisplayName = "Highlighter - STEP";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._step);
+            BackgroundColor = Consts.Colors._step;
+            BackgroundCustomizable = true;
             IsBold = false;
         }
     }
@@ -153,15 +167,17 @@ namespace Highlighter
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
     internal sealed class FormatCommentImportant : ClassificationFormatDefinition
     {
         public FormatCommentImportant()
         {
-            DisplayName = "Important Comment";
+            DisplayName = "Highlighter - IMPORTANT";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._important);
+            BackgroundColor = Consts.Colors._important;
+            BackgroundCustomizable = true;
             IsBold = false;
         }
     }
