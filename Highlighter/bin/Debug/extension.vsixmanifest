@@ -1,15 +1,20 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="Highlighter.5a31f97e-be3b-454f-a5b7-fa58b3f9a594" Version="1.0" Language="en-US" Publisher="Andries de Kock" />
+    <Identity Id="Highlighter.5a31f97e-be3b-454f-a5b7-fa58b3f9a594" Version="1.0.5" Language="en-US" Publisher="Andries de Kock" />
     <DisplayName>Highlighter</DisplayName>
-    <Description xml:space="preserve">Highlights predefined set of keywords in comments i.e. TODO, BUG, FIX, NOTE, OPTIMIZE, IDEA</Description>
-    <Tags>C#, Comment, TODO, BUG, Highlight</Tags>
+    <Description xml:space="preserve">Highlights predefined set of keywords in comments</Description>
+    <Icon>icon.ico</Icon>
+    <PreviewImage>icon.png</PreviewImage>
+    <Tags>Highlighting, Color, TODO, BUG, Tag</Tags>
   </Metadata>
-  <Installation InstalledByMsi="true">
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
+  <Installation InstalledByMsi="false">
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
       <ProductArchitecture>amd64</ProductArchitecture>
     </InstallationTarget>
-    <InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+    <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Pro">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+    <InstallationTarget Version="[17.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
       <ProductArchitecture>amd64</ProductArchitecture>
     </InstallationTarget>
   </Installation>
