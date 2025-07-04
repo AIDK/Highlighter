@@ -4,7 +4,7 @@
 
 A Visual Studio Extension (Require VS 2022) for C# and C/C++ for Highlight comments.
 
-![Highlighter](image.png)
+![Highlighter](Highlighter/image/sample_01.png)
 
 # Supported keywords:
 A list of supported comments:
