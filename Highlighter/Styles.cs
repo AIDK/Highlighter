@@ -102,15 +102,37 @@ namespace Highlighter
     [Order(After = PredefinedClassificationTypeNames.Comment)]
     [Order(After = "Xml Doc Comment")]
     [Order(After = Priority.Default)]
-    internal sealed class FormatCommentIdea : ClassificationFormatDefinition
+    internal sealed class FormatCommentDiscuss : ClassificationFormatDefinition
     {
-        public FormatCommentIdea()
+        public FormatCommentDiscuss()
         {
             DisplayName = "Highlighter - DISCUSS";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
             BackgroundColor = Consts.Colors._discuss;
+            BackgroundCustomizable = true;
+            IsBold = false;
+        }
+    }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameIdea)]
+    [Name(Consts._classificationTypeNameIdea)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
+    internal sealed class FormatCommentIdea : ClassificationFormatDefinition
+    {
+        public FormatCommentIdea()
+        {
+            DisplayName = "Highlighter - IDEA";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundColor = Consts.Colors._idea;
             BackgroundCustomizable = true;
             IsBold = false;
         }

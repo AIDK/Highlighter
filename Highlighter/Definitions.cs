@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.Text.Classification;
+using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 using System.ComponentModel.Composition;
 
@@ -37,5 +37,9 @@ namespace Highlighter
         [Export(typeof(ClassificationTypeDefinition))]
         [Name(Consts._classificationTypeNameImportant)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Important;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameIdea)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Idea;
     }
 }

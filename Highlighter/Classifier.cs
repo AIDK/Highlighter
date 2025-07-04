@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.Language.StandardClassification;
+using Microsoft.VisualStudio.Language.StandardClassification;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
 using System;
@@ -18,6 +18,7 @@ namespace Highlighter
         private readonly IClassificationType _comment_Todo;
         private readonly IClassificationType _comment_Step;
         private readonly IClassificationType _comment_Important;
+        private readonly IClassificationType _comment_Idea;
         private readonly string _pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
         private bool _isClassificationRunning;
 
@@ -34,6 +35,7 @@ namespace Highlighter
             _comment_Discuss = registry.GetClassificationType(Consts._classificationTypeNameDiscuss);
             _comment_Step = registry.GetClassificationType(Consts._classificationTypeNameStep);
             _comment_Important = registry.GetClassificationType(Consts._classificationTypeNameImportant);
+            _comment_Idea = registry.GetClassificationType(Consts._classificationTypeNameIdea);
         }
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
@@ -164,8 +166,11 @@ namespace Highlighter
                 case "important":
                     return _comment_Important;
 
+                case "idea":
+                    return _comment_Idea;
+
                 default:
-                    return _comment_Todo;
+                    return null;
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿using Color = System.Windows.Media.Color;
+using Color = System.Windows.Media.Color;
 
 namespace Highlighter
 {
@@ -15,6 +15,9 @@ namespace Highlighter
         internal const string _classificationTypeNameStep = "Comment.Step";
         internal const string _classificationTypeNameImportant = "Comment.Important";
 
+        // 2025-07-04 (#9)
+        internal const string _classificationTypeNameIdea = "Comment.Idea";
+
         internal static class Colors
         {
             internal static readonly Color _todo = Color.FromRgb(46, 204, 113);
@@ -28,6 +31,9 @@ namespace Highlighter
             internal static readonly Color _discuss = Color.FromRgb(241, 196, 15);
             internal static readonly Color _step = Color.FromRgb(241, 126, 23);
             internal static readonly Color _important = Color.FromRgb(235, 217, 180);
+
+            // 2025-07-04 (#9)
+            internal static readonly Color _idea = Color.FromRgb(155, 89, 182);
         }
     }
 }
