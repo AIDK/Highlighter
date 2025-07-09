@@ -4,36 +4,38 @@ namespace Highlighter
 {
     internal static class Consts
     {
-        internal const string _classificationTypeNameToDo = "Comment.Todo";
-        internal const string _classificationTypeNameBug = "Comment.Bug";
-        internal const string _classificationTypeNameFix = "Comment.FixMe";
-        internal const string _classificationTypeNameNote = "Comment.Note";
-        internal const string _classificationTypeNameOptimize = "Comment.Optimize";
-
-        // 2024-08-05 (#1)
-        internal const string _classificationTypeNameDiscuss = "Comment.Discuss";
-        internal const string _classificationTypeNameStep = "Comment.Step";
-        internal const string _classificationTypeNameImportant = "Comment.Important";
-
-        // 2025-07-04 (#9)
-        internal const string _classificationTypeNameIdea = "Comment.Idea";
+        internal const string classificationTypeNameToDo = "Comment.Todo";
+        internal const string classificationTypeNameBug = "Comment.Bug";
+        internal const string classificationTypeNameFix = "Comment.FixMe";
+        internal const string classificationTypeNameNote = "Comment.Note";
+        internal const string classificationTypeNameOptimize = "Comment.Optimize";
+        internal const string classificationTypeNameDiscuss = "Comment.Discuss";
+        internal const string classificationTypeNameStep = "Comment.Step";
+        internal const string classificationTypeNameImportant = "Comment.Important";
+        internal const string classificationTypeNameIdea = "Comment.Idea";
 
         internal static class Colors
         {
-            internal static readonly Color _todo = Color.FromRgb(46, 204, 113);
-            internal static readonly Color _bug = Color.FromRgb(231, 76, 60);
-            internal static readonly Color _fix = Color.FromRgb(230, 126, 34);
-            internal static readonly Color _note = Color.FromRgb(52, 152, 219);
-            internal static readonly Color _optimize = Color.FromRgb(26, 188, 156);
-            internal static readonly Color _system = Color.FromRgb(51, 51, 3);
-
-            // 2024-08-05 (#1)
-            internal static readonly Color _discuss = Color.FromRgb(241, 196, 15);
-            internal static readonly Color _step = Color.FromRgb(241, 126, 23);
-            internal static readonly Color _important = Color.FromRgb(235, 217, 180);
-
-            // 2025-07-04 (#9)
-            internal static readonly Color _idea = Color.FromRgb(155, 89, 182);
+            // deep green
+            internal static readonly Color todo = Color.FromRgb(39, 174, 96);
+            // vibrant red
+            internal static readonly Color bug = Color.FromRgb(231, 76, 60);
+            // reddish-brown
+            internal static readonly Color fix = Color.FromRgb(184, 77, 40);
+            // bright blue
+            internal static readonly Color note = Color.FromRgb(68, 158, 235);
+            // teal 
+            internal static readonly Color optimize = Color.FromRgb(32, 196, 156);
+            // black
+            internal static readonly Color system = Color.FromRgb(10, 10, 10);
+            // golden yellow
+            internal static readonly Color discuss = Color.FromRgb(241, 196, 15);
+            // distinct orange
+            internal static readonly Color step = Color.FromRgb(243, 156, 18);
+            // amber/orange-gold
+            internal static readonly Color important = Color.FromRgb(211, 84, 0);
+            // purple
+            internal static readonly Color idea = Color.FromRgb(177, 95, 219);
         }
     }
 }

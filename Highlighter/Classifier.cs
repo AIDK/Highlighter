@@ -27,15 +27,15 @@ namespace Highlighter
             _isClassificationRunning = false;
             _classifier = classifier;
 
-            _comment_Todo = registry.GetClassificationType(Consts._classificationTypeNameToDo);
-            _comment_Bug = registry.GetClassificationType(Consts._classificationTypeNameBug);
-            _comment_Fix = registry.GetClassificationType(Consts._classificationTypeNameFix);
-            _comment_Note = registry.GetClassificationType(Consts._classificationTypeNameNote);
-            _comment_Optimize = registry.GetClassificationType(Consts._classificationTypeNameOptimize);
-            _comment_Discuss = registry.GetClassificationType(Consts._classificationTypeNameDiscuss);
-            _comment_Step = registry.GetClassificationType(Consts._classificationTypeNameStep);
-            _comment_Important = registry.GetClassificationType(Consts._classificationTypeNameImportant);
-            _comment_Idea = registry.GetClassificationType(Consts._classificationTypeNameIdea);
+            _comment_Todo = registry.GetClassificationType(Consts.classificationTypeNameToDo);
+            _comment_Bug = registry.GetClassificationType(Consts.classificationTypeNameBug);
+            _comment_Fix = registry.GetClassificationType(Consts.classificationTypeNameFix);
+            _comment_Note = registry.GetClassificationType(Consts.classificationTypeNameNote);
+            _comment_Optimize = registry.GetClassificationType(Consts.classificationTypeNameOptimize);
+            _comment_Discuss = registry.GetClassificationType(Consts.classificationTypeNameDiscuss);
+            _comment_Step = registry.GetClassificationType(Consts.classificationTypeNameStep);
+            _comment_Important = registry.GetClassificationType(Consts.classificationTypeNameImportant);
+            _comment_Idea = registry.GetClassificationType(Consts.classificationTypeNameIdea);
         }
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;

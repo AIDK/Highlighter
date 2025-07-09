@@ -6,8 +6,8 @@ using System.ComponentModel.Composition;
 namespace Highlighter
 {
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameToDo)]
-    [Name(Consts._classificationTypeNameToDo)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameToDo)]
+    [Name(Consts.classificationTypeNameToDo)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -20,16 +20,16 @@ namespace Highlighter
             DisplayName = "Highlighter - TODO";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._todo;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.todo;
             BackgroundCustomizable = true;
             IsBold = false;
         }
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameBug)]
-    [Name(Consts._classificationTypeNameBug)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameBug)]
+    [Name(Consts.classificationTypeNameBug)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -43,16 +43,16 @@ namespace Highlighter
             DisplayName = "Highlighter - BUG";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._bug;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.bug;
             BackgroundCustomizable = true;
             IsBold = false;
         }
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameFix)]
-    [Name(Consts._classificationTypeNameFix)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameFix)]
+    [Name(Consts.classificationTypeNameFix)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -65,16 +65,16 @@ namespace Highlighter
             DisplayName = "Highlighter - FIXME";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._fix;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.fix;
             BackgroundCustomizable = true;
             IsBold = false;
         }
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameNote)]
-    [Name(Consts._classificationTypeNameNote)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameNote)]
+    [Name(Consts.classificationTypeNameNote)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -87,16 +87,16 @@ namespace Highlighter
             DisplayName = "Highlighter - NOTE";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._note;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.note;
             BackgroundCustomizable = true;
             IsBold = false;
         }
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameDiscuss)]
-    [Name(Consts._classificationTypeNameDiscuss)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameDiscuss)]
+    [Name(Consts.classificationTypeNameDiscuss)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -109,16 +109,16 @@ namespace Highlighter
             DisplayName = "Highlighter - DISCUSS";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._discuss;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.discuss;
             BackgroundCustomizable = true;
             IsBold = false;
         }
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameIdea)]
-    [Name(Consts._classificationTypeNameIdea)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameIdea)]
+    [Name(Consts.classificationTypeNameIdea)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -131,16 +131,16 @@ namespace Highlighter
             DisplayName = "Highlighter - IDEA";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._idea;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.idea;
             BackgroundCustomizable = true;
             IsBold = false;
         }
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameOptimize)]
-    [Name(Consts._classificationTypeNameOptimize)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameOptimize)]
+    [Name(Consts.classificationTypeNameOptimize)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -153,16 +153,16 @@ namespace Highlighter
             DisplayName = "Highlighter - OPTIMIZE";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._optimize;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.optimize;
             BackgroundCustomizable = true;
             IsBold = false;
         }
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameStep)]
-    [Name(Consts._classificationTypeNameStep)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameStep)]
+    [Name(Consts.classificationTypeNameStep)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -175,16 +175,16 @@ namespace Highlighter
             DisplayName = "Highlighter - STEP";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._step;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.step;
             BackgroundCustomizable = true;
             IsBold = false;
         }
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameImportant)]
-    [Name(Consts._classificationTypeNameImportant)]
+    [ClassificationType(ClassificationTypeNames = Consts.classificationTypeNameImportant)]
+    [Name(Consts.classificationTypeNameImportant)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -197,8 +197,8 @@ namespace Highlighter
             DisplayName = "Highlighter - IMPORTANT";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._important;
+            ForegroundColor = Consts.Colors.system;
+            BackgroundColor = Consts.Colors.important;
             BackgroundCustomizable = true;
             IsBold = false;
         }

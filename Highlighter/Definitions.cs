@@ -7,39 +7,39 @@ namespace Highlighter
     internal static class Definitions
     {
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameToDo)]
+        [Name(Consts.classificationTypeNameToDo)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Todo;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameBug)]
+        [Name(Consts.classificationTypeNameBug)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Bug;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameFix)]
+        [Name(Consts.classificationTypeNameFix)]
         private static readonly ClassificationTypeDefinition Definition_Comment_FixMe;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameNote)]
+        [Name(Consts.classificationTypeNameNote)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Note;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameOptimize)]
+        [Name(Consts.classificationTypeNameOptimize)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Optimize;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameDiscuss)]
+        [Name(Consts.classificationTypeNameDiscuss)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Discuss;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameStep)]
+        [Name(Consts.classificationTypeNameStep)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Step;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameImportant)]
+        [Name(Consts.classificationTypeNameImportant)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Important;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameIdea)]
+        [Name(Consts.classificationTypeNameIdea)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Idea;
     }
 }
