@@ -10,30 +10,26 @@ namespace Highlighter
         internal const string _classificationTypeNameNote = "Comment.Note";
         internal const string _classificationTypeNameOptimize = "Comment.Optimize";
 
-        // 2024-08-05 (#1)
         internal const string _classificationTypeNameDiscuss = "Comment.Discuss";
         internal const string _classificationTypeNameStep = "Comment.Step";
         internal const string _classificationTypeNameImportant = "Comment.Important";
 
-        // 2025-07-04 (#9)
         internal const string _classificationTypeNameIdea = "Comment.Idea";
 
         internal static class Colors
         {
-            internal static readonly Color _todo = Color.FromRgb(46, 204, 113);
-            internal static readonly Color _bug = Color.FromRgb(231, 76, 60);
-            internal static readonly Color _fix = Color.FromRgb(230, 126, 34);
-            internal static readonly Color _note = Color.FromRgb(52, 152, 219);
-            internal static readonly Color _optimize = Color.FromRgb(26, 188, 156);
-            internal static readonly Color _system = Color.FromRgb(51, 51, 3);
+            internal static readonly Color _todo = Color.FromRgb(r: 39, g: 174, b: 96); // Deeper, grounded green
+            internal static readonly Color _bug = Color.FromRgb(r: 231, g: 76, b: 60); // Keep vibrant red
+            internal static readonly Color _fix = Color.FromRgb(r: 184, g: 77, b: 40); // Richer, warm reddish-brown
+            internal static readonly Color _note = Color.FromRgb(r: 68, g: 158, b: 235); // Slightly brighter informational blue
+            internal static readonly Color _optimize = Color.FromRgb(r: 32, g: 196, b: 180); // Slightly more vibrant teal
+            internal static readonly Color _system = Color.FromRgb(r: 10, g: 10, b: 10); // Very, very dark grey (reads as full black)
 
-            // 2024-08-05 (#1)
-            internal static readonly Color _discuss = Color.FromRgb(241, 196, 15);
-            internal static readonly Color _step = Color.FromRgb(241, 126, 23);
-            internal static readonly Color _important = Color.FromRgb(235, 217, 180);
+            internal static readonly Color _discuss = Color.FromRgb(r: 241, g: 196, b: 15); // Keep golden yellow
+            internal static readonly Color _step = Color.FromRgb(r: 243, g: 156, b: 18); // Clear, distinct orange
+            internal static readonly Color _important = Color.FromRgb(r: 211, g: 84, b: 0); // Strong, deep amber/orange-gold
 
-            // 2025-07-04 (#9)
-            internal static readonly Color _idea = Color.FromRgb(155, 89, 182);
+            internal static readonly Color _idea = Color.FromRgb(r: 177, g: 95, b: 219); // Slightly brighter, imaginative purple
         }
     }
 }
