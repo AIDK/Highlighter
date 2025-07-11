@@ -16,6 +16,8 @@ namespace Highlighter
 
         internal const string _classificationTypeNameIdea = "Comment.Idea";
 
+        internal const string _classificationTypeNameDelete = "Comment.Delete";
+
         internal static class Colors
         {
             internal static readonly Color _todo = Color.FromRgb(r: 39, g: 174, b: 96); // Deeper, grounded green
@@ -30,6 +32,8 @@ namespace Highlighter
             internal static readonly Color _important = Color.FromRgb(r: 211, g: 84, b: 0); // Strong, deep amber/orange-gold
 
             internal static readonly Color _idea = Color.FromRgb(r: 177, g: 95, b: 219); // Slightly brighter, imaginative purple
+
+            internal static readonly Color _delete = Color.FromRgb(r: 178, g: 34, b: 34); // Deep, slightly lighter red for destructive actions
         }
     }
 }

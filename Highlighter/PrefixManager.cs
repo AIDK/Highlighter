@@ -5,6 +5,7 @@ namespace Highlighter
     internal static class PrefixManager
     {
         private static readonly List<string> _prefixes = new List<string>();
+        private readonly static string[] defaultKeywords = new string[] { "todo", "bug", "fixme", "note", "optimize", "discuss", "step", "important", "idea", "delete" };
 
         static PrefixManager()
         {
@@ -34,6 +35,6 @@ namespace Highlighter
 
         public static bool Contains(string prefix) => _prefixes.Contains(prefix);
 
-        private static void InitDefaults() => Add("todo", "bug", "fixme", "note", "optimize", "discuss", "step", "important", "idea");
+        private static void InitDefaults() => Add(defaultKeywords);
     }
 }

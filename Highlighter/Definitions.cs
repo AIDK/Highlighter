@@ -41,5 +41,9 @@ namespace Highlighter
         [Export(typeof(ClassificationTypeDefinition))]
         [Name(Consts._classificationTypeNameIdea)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Idea;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameDelete)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Delete;
     }
 }

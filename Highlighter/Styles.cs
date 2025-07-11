@@ -203,4 +203,26 @@ namespace Highlighter
             IsBold = false;
         }
     }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameDelete)]
+    [Name(Consts._classificationTypeNameDelete)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
+    internal sealed class FormatCommentDelete : ClassificationFormatDefinition
+    {
+        public FormatCommentDelete()
+        {
+            DisplayName = "Highlighter - DELETE";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundColor = Consts.Colors._delete;
+            BackgroundCustomizable = true;
+            IsBold = false;
+        }
+    }
 }

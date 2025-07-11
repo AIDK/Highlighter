@@ -19,6 +19,7 @@ namespace Highlighter
         private readonly IClassificationType _comment_Step;
         private readonly IClassificationType _comment_Important;
         private readonly IClassificationType _comment_Idea;
+        private readonly IClassificationType _comment_Delete;
         private readonly string _pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
         private bool _isClassificationRunning;
 
@@ -36,6 +37,7 @@ namespace Highlighter
             _comment_Step = registry.GetClassificationType(Consts._classificationTypeNameStep);
             _comment_Important = registry.GetClassificationType(Consts._classificationTypeNameImportant);
             _comment_Idea = registry.GetClassificationType(Consts._classificationTypeNameIdea);
+            _comment_Delete = registry.GetClassificationType(Consts._classificationTypeNameDelete);
         }
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
@@ -168,6 +170,9 @@ namespace Highlighter
 
                 case "idea":
                     return _comment_Idea;
+
+                case "delete":
+                    return _comment_Delete;
 
                 default:
                     return null;
