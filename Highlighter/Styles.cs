@@ -66,7 +66,7 @@ namespace Highlighter
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._fix;
+            BackgroundColor = Consts.Colors._fixme;
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -221,6 +221,50 @@ namespace Highlighter
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
             BackgroundColor = Consts.Colors._delete;
+            BackgroundCustomizable = true;
+            IsBold = false;
+        }
+    }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameWip)]
+    [Name(Consts._classificationTypeNameWip)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
+    internal sealed class FormatCommentWip : ClassificationFormatDefinition
+    {
+        public FormatCommentWip()
+        {
+            DisplayName = "Highlighter - WIP";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundColor = Consts.Colors._wip;
+            BackgroundCustomizable = true;
+            IsBold = false;
+        }
+    }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameWorkaround)]
+    [Name(Consts._classificationTypeNameWorkaround)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
+    internal sealed class FormatCommentWorkaround : ClassificationFormatDefinition
+    {
+        public FormatCommentWorkaround()
+        {
+            DisplayName = "Highlighter - WORKAROUND";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundColor = Consts.Colors._workaround;
             BackgroundCustomizable = true;
             IsBold = false;
         }
