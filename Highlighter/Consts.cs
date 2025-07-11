@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 using Color = System.Windows.Media.Color;
 
@@ -35,55 +36,40 @@ namespace Highlighter
             WORKAROUND
         }
 
-        internal static Color ToColor(ColorKeyword color) {
-            (byte r, byte g, byte b) = GetRGB(color);
-            return Color.FromRgb(r, g, b);
-        }
+        private static readonly Dictionary<ColorKeyword, Color> keywordColors = new Dictionary<ColorKeyword, Color>() {
+            //SYSTEM:
+            [ColorKeyword.SYSTEM] = Color.FromRgb(10, 10, 10),
+            //TODO:
+            [ColorKeyword.TODO] = Color.FromRgb(39, 174, 96),
+            //BUG:
+            [ColorKeyword.BUG] = Color.FromRgb(231, 76, 60),
+            //FIXME:
+            [ColorKeyword.FIXME] = Color.FromRgb(184, 77, 40),
+            //NOTE:
+            [ColorKeyword.NOTE] = Color.FromRgb(68, 158, 235),
+            //OPTIMIZE:
+            [ColorKeyword.OPTIMIZE] = Color.FromRgb(32, 196, 180),
+            //DISCUSS:
+            [ColorKeyword.DISCUSS] = Color.FromRgb(241, 196, 15),
+            //STEP:
+            [ColorKeyword.STEP] = Color.FromRgb(243, 156, 18),
+            //IMPORTANT:
+            [ColorKeyword.IMPORTANT] = Color.FromRgb(211, 84, 0),
+            //IDEA:
+            [ColorKeyword.IDEA] = Color.FromRgb(177, 95, 219),
+            //DELETE:
+            [ColorKeyword.DELETE] = Color.FromRgb(178, 34, 34),
+            //WIP:
+            [ColorKeyword.WIP] = Color.FromRgb(255, 214, 179),
+            //WORKAROUND:
+            [ColorKeyword.WORKAROUND] = Color.FromRgb(179, 217, 255)
+        };
 
-        private static (byte r, byte g, byte b) GetRGB(ColorKeyword keyword) {
-            switch (keyword) {
-                //SYSTEM:
-                case ColorKeyword.SYSTEM:
-                    return (r: 10, g: 10, b: 10);
-                //TODO:
-                case ColorKeyword.TODO:
-                    return (r: 39, g: 174, b: 96);
-                //BUG:
-                case ColorKeyword.BUG:
-                    return (r: 231, g: 76, b: 60);
-                //FIXME:
-                case ColorKeyword.FIXME:
-                    return (r: 184, g: 77, b: 40);
-                //NOTE:
-                case ColorKeyword.NOTE:
-                    return (r: 68, g: 158, b: 235);
-                //OPTIMIZE:
-                case ColorKeyword.OPTIMIZE:
-                    return (r: 32, g: 196, b: 180);
-                //DISCUSS:
-                case ColorKeyword.DISCUSS:
-                    return (r: 241, g: 196, b: 15);
-                //STEP:
-                case ColorKeyword.STEP:
-                    return (r: 243, g: 156, b: 18);
-                //IMPORTANT:
-                case ColorKeyword.IMPORTANT:
-                    return (r: 211, g: 84, b: 0);
-                //IDEA:
-                case ColorKeyword.IDEA:
-                    return (r: 177, g: 95, b: 219);
-                //DELETE:
-                case ColorKeyword.DELETE:
-                    return (r: 178, g: 34, b: 34);
-                //WIP:
-                case ColorKeyword.WIP:
-                    return (r: 255, g: 214, b: 179);
-                //WORKAROUND:
-                case ColorKeyword.WORKAROUND:
-                    return (r: 179, g: 217, b: 255);
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+        public static Color ToColor(this ColorKeyword keyword) {
+            if (keywordColors.TryGetValue(keyword, out Color color))
+                return color;
+
+            throw new ArgumentOutOfRangeException(nameof(keyword), $"No color defined for keyword: {keyword}");
         }
     }
 }
