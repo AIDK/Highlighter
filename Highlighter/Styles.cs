@@ -20,8 +20,8 @@ namespace Highlighter
             DisplayName = "Highlighter - TODO";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._todo;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.TODO);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -43,8 +43,8 @@ namespace Highlighter
             DisplayName = "Highlighter - BUG";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._bug;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.BUG);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -65,8 +65,8 @@ namespace Highlighter
             DisplayName = "Highlighter - FIXME";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._fixme;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.FIXME);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -87,8 +87,8 @@ namespace Highlighter
             DisplayName = "Highlighter - NOTE";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._note;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.NOTE);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -109,8 +109,8 @@ namespace Highlighter
             DisplayName = "Highlighter - DISCUSS";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._discuss;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.DISCUSS);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -131,8 +131,8 @@ namespace Highlighter
             DisplayName = "Highlighter - IDEA";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._idea;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.IDEA);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -153,8 +153,8 @@ namespace Highlighter
             DisplayName = "Highlighter - OPTIMIZE";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._optimize;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.OPTIMIZE);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -175,8 +175,8 @@ namespace Highlighter
             DisplayName = "Highlighter - STEP";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._step;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.STEP);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -197,8 +197,8 @@ namespace Highlighter
             DisplayName = "Highlighter - IMPORTANT";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._important;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.IMPORTANT);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -219,8 +219,8 @@ namespace Highlighter
             DisplayName = "Highlighter - DELETE";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._delete;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.DELETE);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -241,8 +241,8 @@ namespace Highlighter
             DisplayName = "Highlighter - WIP";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._wip;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.WIP);
             BackgroundCustomizable = true;
             IsBold = false;
         }
@@ -263,8 +263,8 @@ namespace Highlighter
             DisplayName = "Highlighter - WORKAROUND";
 
             BackgroundCustomizable = false;
-            ForegroundColor = Consts.Colors._system;
-            BackgroundColor = Consts.Colors._workaround;
+            ForegroundColor = Consts.ToColor(Consts.ColorKeyword.SYSTEM);
+            BackgroundColor = Consts.ToColor(Consts.ColorKeyword.WORKAROUND);
             BackgroundCustomizable = true;
             IsBold = false;
         }
