@@ -4,7 +4,7 @@
 
 A Visual Studio Extension (Require VS 2022) for C# and C/C++ for Highlight comments.
 
-![Highlighter](Highlighter/image/sample_01.png)
+![Highlighter](Highlighter/image/image_2.png)
 
 # Supported keywords:
 A list of supported comments:
@@ -15,9 +15,10 @@ A list of supported comments:
 - **NOTE** *(Default color: Blue)*
 - **DISCUSS** *(Default color: Yellow)*
 - **OPTIMIZE** *(Default color: Water green)*
-- **FIXME** *(Default color: Orange)*
-- **STEP** *(Default color: Orange)*
-- **IMPORTANT** *(Default color: Besh)*
+- **FIXME** *(Default color: Deep Orange)*
+- **STEP** *(Default color: Orange/Yellow)*
+- **IMPORTANT** *(Default color: Orange)*
+- **DELETE** *(Default color: Lightish Red)*
 
 You can also modify the default colors by going to **Tools** > **Options** > **Environment** > **Fonts and Colors**.
 
