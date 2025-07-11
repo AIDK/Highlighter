@@ -5,7 +5,7 @@ namespace Highlighter
     internal static class PrefixManager
     {
         private static readonly List<string> _prefixes = new List<string>();
-        private readonly static string[] defaultKeywords = new string[] { "todo", "bug", "fixme", "note", "optimize", "discuss", "step", "important", "idea", "delete" };
+        private readonly static string[] defaultKeywords = new string[] { "todo", "bug", "fixme", "note", "optimize", "discuss", "step", "important", "idea", "delete", "wip", "workaround" };
 
         static PrefixManager()
         {
