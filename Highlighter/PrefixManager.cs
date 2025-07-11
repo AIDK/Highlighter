@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Highlighter
@@ -5,12 +6,8 @@ namespace Highlighter
     internal static class PrefixManager
     {
         private static readonly List<string> _prefixes = new List<string>();
-        private readonly static string[] defaultKeywords = new string[] { "todo", "bug", "fixme", "note", "optimize", "discuss", "step", "important", "idea", "delete", "wip", "workaround" };
 
-        static PrefixManager()
-        {
-            InitDefaults();
-        }
+        static PrefixManager() => InitDefaults();
 
         public static void Add(params string[] prefixes)
         {
@@ -22,19 +19,12 @@ namespace Highlighter
             }
         }
 
-        public static void Remove(string prefix)
-        {
-            if (!Contains(prefix)) return;
-
-            _prefixes.Remove(prefix);
-        }
-
         public static int Count => _prefixes.Count;
 
         public static string GetPrefix(int index) => _prefixes[index];
 
         public static bool Contains(string prefix) => _prefixes.Contains(prefix);
 
-        private static void InitDefaults() => Add(defaultKeywords);
+        private static void InitDefaults() => Add(Enum.GetNames(typeof(Consts.ColorKeyword)));
     }
 }
