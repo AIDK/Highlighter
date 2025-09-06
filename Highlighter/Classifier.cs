@@ -9,56 +9,39 @@ namespace Highlighter
 {
     internal class Classifier : IClassifier
     {
-        private readonly IClassifier _classifier;
-        private readonly IClassificationType _comment_Bug;
-        private readonly IClassificationType _comment_Fix;
-        private readonly IClassificationType _comment_Discuss;
-        private readonly IClassificationType _comment_Note;
-        private readonly IClassificationType _comment_Optimize;
-        private readonly IClassificationType _comment_Todo;
-        private readonly IClassificationType _comment_Step;
-        private readonly IClassificationType _comment_Important;
-        private readonly IClassificationType _comment_Idea;
-        private readonly IClassificationType _comment_Delete;
-        private readonly IClassificationType _comment_Wip;
-        private readonly IClassificationType _comment_Workaround;
-        private readonly string _pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
-        private bool _isClassificationRunning;
+        private readonly IClassifier classifier;
+        private readonly string pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
+        private bool isClassificationRunning;
+        private readonly Dictionary<string, IClassificationType> classificationMap;
 
         internal Classifier(IClassificationTypeRegistryService registry, IClassifier classifier)
         {
-            _isClassificationRunning = false;
-            _classifier = classifier;
+            this.isClassificationRunning = false;
+            this.classificationMap = new Dictionary<string, IClassificationType>(StringComparer.OrdinalIgnoreCase);
+            this.classifier = classifier;
 
-            _comment_Todo = registry.GetClassificationType(Consts._classificationTypeNameToDo);
-            _comment_Bug = registry.GetClassificationType(Consts._classificationTypeNameBug);
-            _comment_Fix = registry.GetClassificationType(Consts._classificationTypeNameFix);
-            _comment_Note = registry.GetClassificationType(Consts._classificationTypeNameNote);
-            _comment_Optimize = registry.GetClassificationType(Consts._classificationTypeNameOptimize);
-            _comment_Discuss = registry.GetClassificationType(Consts._classificationTypeNameDiscuss);
-            _comment_Step = registry.GetClassificationType(Consts._classificationTypeNameStep);
-            _comment_Important = registry.GetClassificationType(Consts._classificationTypeNameImportant);
-            _comment_Idea = registry.GetClassificationType(Consts._classificationTypeNameIdea);
-            _comment_Delete = registry.GetClassificationType(Consts._classificationTypeNameDelete);
-            _comment_Wip = registry.GetClassificationType(Consts._classificationTypeNameWip);
-            _comment_Workaround = registry.GetClassificationType(Consts._classificationTypeNameWorkaround);
+            foreach (var item in KeywordService.KeywordToClassification) {
+                if (registry.GetClassificationType(item.Value) != null) {
+                    classificationMap[item.Key] = registry.GetClassificationType(item.Value);
+                }
+            }
         }
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
 
         public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
         {
-            if (_isClassificationRunning)
+            if (isClassificationRunning)
                 return new List<ClassificationSpan>();
 
             try
             {
-                _isClassificationRunning = true;
+                isClassificationRunning = true;
                 return Classify(span);
             }
             finally
             {
-                _isClassificationRunning = false;
+                isClassificationRunning = false;
             }
         }
 
@@ -73,7 +56,7 @@ namespace Highlighter
             int currentOffset;
 
         NextComment:
-            foreach (Match match in new Regex(_pattern).Matches(text))
+            foreach (Match match in new Regex(pattern).Matches(text))
             {
                 var starOffset = 0;
 
@@ -81,7 +64,7 @@ namespace Highlighter
                     goto SkipComment;
 
                 var matchedSpan = new SnapshotSpan(span.Snapshot, new Span(span.Start + offset + starOffset + match.Index, match.Length - starOffset));
-                var intersections = _classifier.GetClassificationSpans(matchedSpan);
+                var intersections = classifier.GetClassificationSpans(matchedSpan);
 
                 foreach (var intersection in intersections)
                 {
@@ -119,7 +102,7 @@ namespace Highlighter
                         //spans.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(slashesStart, commentText.Length + slashesLength)), GetClassifier(prefix.ToLower())));
 
                         // the below code highlights only the prefix i.e. BUG, TODO, etc.
-                        spans.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(slashesStart + slashesLength, prefix.Length + 1)), GetClassifier(prefix.ToLower())));
+                        spans.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(slashesStart + slashesLength, prefix.Length + 1)), GetClassifier(prefix)));
                         skipInlineMatching = true;
                     }
                 }
@@ -144,49 +127,7 @@ namespace Highlighter
             return spans;
         }
 
-        private IClassificationType GetClassifier(string prefix)
-        {
-            switch (prefix)
-            {
-                case "todo":
-                    return _comment_Todo;
-
-                case "bug":
-                    return _comment_Bug;
-
-                case "fixme":
-                    return _comment_Fix;
-
-                case "note":
-                    return _comment_Note;
-
-                case "optimize":
-                    return _comment_Optimize;
-
-                case "discuss":
-                    return _comment_Discuss;
-
-                case "step":
-                    return _comment_Step;
-
-                case "important":
-                    return _comment_Important;
-
-                case "idea":
-                    return _comment_Idea;
-
-                case "delete":
-                    return _comment_Delete;
-
-                case "wip":
-                    return _comment_Wip;
-
-                case "workaround":
-                    return _comment_Workaround;
-
-                default:
-                    return null;
-            }
-        }
+        private IClassificationType GetClassifier(string prefix) => 
+            classificationMap.TryGetValue(prefix, out var type) ? type : null;
     }
 }
