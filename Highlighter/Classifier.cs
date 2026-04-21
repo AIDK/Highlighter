@@ -1,14 +1,13 @@
 using Microsoft.VisualStudio.Language.StandardClassification;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
+
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Highlighter
-{
-    internal class Classifier : IClassifier
-    {
+namespace Highlighter {
+    internal class Classifier : IClassifier {
         private readonly IClassifier _classifier;
         private readonly IClassificationType _comment_Bug;
         private readonly IClassificationType _comment_Fix;
@@ -23,10 +22,10 @@ namespace Highlighter
         private readonly IClassificationType _comment_Wip;
         private readonly IClassificationType _comment_Workaround;
         private readonly string _pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
+        private readonly string _blockPattern = @"/\*[\s\S]*?\*/";
         private bool _isClassificationRunning;
 
-        internal Classifier(IClassificationTypeRegistryService registry, IClassifier classifier)
-        {
+        internal Classifier(IClassificationTypeRegistryService registry, IClassifier classifier) {
             _isClassificationRunning = false;
             _classifier = classifier;
 
@@ -46,24 +45,20 @@ namespace Highlighter
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
 
-        public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
-        {
+        public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span) {
             if (_isClassificationRunning)
                 return new List<ClassificationSpan>();
 
-            try
-            {
+            try {
                 _isClassificationRunning = true;
                 return Classify(span);
             }
-            finally
-            {
+            finally {
                 _isClassificationRunning = false;
             }
         }
 
-        private IList<ClassificationSpan> Classify(SnapshotSpan span)
-        {
+        private IList<ClassificationSpan> Classify(SnapshotSpan span) {
             var spans = new List<ClassificationSpan>();
             if (span.IsEmpty)
                 return spans;
@@ -73,8 +68,7 @@ namespace Highlighter
             int currentOffset;
 
         NextComment:
-            foreach (Match match in new Regex(_pattern).Matches(text))
-            {
+            foreach (Match match in new Regex(_pattern).Matches(text)) {
                 var starOffset = 0;
 
                 if (match.Groups["Star"].Length > 0)
@@ -83,8 +77,7 @@ namespace Highlighter
                 var matchedSpan = new SnapshotSpan(span.Snapshot, new Span(span.Start + offset + starOffset + match.Index, match.Length - starOffset));
                 var intersections = _classifier.GetClassificationSpans(matchedSpan);
 
-                foreach (var intersection in intersections)
-                {
+                foreach (var intersection in intersections) {
                     var classifications = intersection.ClassificationType.Classification.Split(new[] { " - " }, StringSplitOptions.None);
 
                     if (!Utils.IsClassifiedAs(classifications, new[] { PredefinedClassificationTypeNames.Comment, "XML Doc Comment" }))
@@ -110,11 +103,9 @@ namespace Highlighter
                 var commentText = match.Groups["Comment"].Value;
                 var skipInlineMatching = false;
 
-                for (int i = 0; i < PrefixManager.Count; i++)
-                {
+                for (int i = 0; i < PrefixManager.Count; i++) {
                     var prefix = PrefixManager.GetPrefix(i);
-                    if (commentText.ToLower().Trim().StartsWith(prefix.ToLower() + ":"))
-                    {
+                    if (commentText.ToLower().Trim().StartsWith(prefix.ToLower() + ":")) {
                         // uncomment below code if you want to highlight the entire commented line
                         //spans.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(slashesStart, commentText.Length + slashesLength)), GetClassifier(prefix.ToLower())));
 
@@ -141,13 +132,39 @@ namespace Highlighter
                 goto NextComment;
             }
 
+            var snapshot = span.Snapshot;
+            var fullText = snapshot.GetText();
+
+            foreach (Match blockMatch in Regex.Matches(fullText, _blockPattern, RegexOptions.Singleline)) {
+                var blockStart = blockMatch.Index;
+                var blockText = blockMatch.Value;
+                var blockLines = blockText.Split('\n');
+
+                int lineOffset = 0;
+                foreach (var line in blockLines) {
+                    for (int i = 0; i < PrefixManager.Count; i++) {
+                        var prefix = PrefixManager.GetPrefix(i);
+                        var regex = new Regex($@"^\s*(\*+)?\s*{Regex.Escape(prefix)}:", RegexOptions.IgnoreCase);
+                        var match = regex.Match(line);
+                        if (match.Success) {
+                            int prefixIndex = match.Index + match.Value.IndexOf(prefix, StringComparison.OrdinalIgnoreCase);
+                            int absoluteIndex = blockStart + lineOffset + prefixIndex;
+                            if (absoluteIndex >= 0 && absoluteIndex + prefix.Length + 1 <= snapshot.Length) {
+                                spans.Add(new ClassificationSpan(
+                                    new SnapshotSpan(snapshot, new Span(absoluteIndex, prefix.Length + 1)),
+                                    GetClassifier(prefix.ToLower())));
+                            }
+                        }
+                    }
+                    lineOffset += line.Length + 1; // +1 per '\n'
+                }
+            }
+
             return spans;
         }
 
-        private IClassificationType GetClassifier(string prefix)
-        {
-            switch (prefix)
-            {
+        private IClassificationType GetClassifier(string prefix) {
+            switch (prefix) {
                 case "todo":
                     return _comment_Todo;
 
