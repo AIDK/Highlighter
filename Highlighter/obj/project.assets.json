@@ -13692,17 +13692,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andriesd\\.nuget\\packages\\": {},
+    "C:\\Users\\alessandro.toto\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repository\\other\\highlighter\\Highlighter\\Highlighter.csproj",
+      "projectUniqueName": "E:\\test\\Highlighter\\Highlighter\\Highlighter.csproj",
       "projectName": "Highlighter",
-      "projectPath": "C:\\Repository\\other\\highlighter\\Highlighter\\Highlighter.csproj",
-      "packagesPath": "C:\\Users\\andriesd\\.nuget\\packages\\",
-      "outputPath": "C:\\Repository\\other\\highlighter\\Highlighter\\obj\\",
+      "projectPath": "E:\\test\\Highlighter\\Highlighter\\Highlighter.csproj",
+      "packagesPath": "C:\\Users\\alessandro.toto\\.nuget\\packages\\",
+      "outputPath": "E:\\test\\Highlighter\\Highlighter\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "UsingMicrosoftNETSdk": false,
@@ -13710,7 +13710,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\andriesd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alessandro.toto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -13719,11 +13719,11 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.cashpos.co.za/nuget": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net472": {
+          "framework": "net472",
           "projectReferences": {}
         }
       },
@@ -13735,6 +13735,7 @@
     },
     "frameworks": {
       "net472": {
+        "framework": "net472",
         "dependencies": {
           "Microsoft.VSSDK.BuildTools": {
             "target": "Package",
