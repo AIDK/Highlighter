@@ -2,7 +2,7 @@
 
 ![GitHub release](https://img.shields.io/github/v/release/AIDK/Highlighter?color=009dff) [![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)](https://github.com/AIDK/Highlighter/blob/main/LICENSE.txt)
 
-A Visual Studio Extension (Require VS 2022) for C# and C/C++ for Highlight comments.
+A Visual Studio extension for C# and C/C++ that highlights keywords in comments. Works with Visual Studio 2019, 2022 and 2026.
 
 ![Highlighter](Highlighter/image/image_2.png)
 
@@ -19,6 +19,9 @@ A list of supported comments:
 - **STEP** *(Default color: Orange/Yellow)*
 - **IMPORTANT** *(Default color: Orange)*
 - **DELETE** *(Default color: Lightish Red)*
+- **WIP**
+- **WORKAROUND**
+- **CHECK** *(Default color: Pink)*
 
 You can also modify the default colors by going to **Tools** > **Options** > **Environment** > **Fonts and Colors**.
 

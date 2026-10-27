@@ -53,5 +53,9 @@ namespace Highlighter
         [Export(typeof(ClassificationTypeDefinition))]
         [Name(Consts._classificationTypeNameWorkaround)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Workaround;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameCheck)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Check;
     }
 }

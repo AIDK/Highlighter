@@ -19,6 +19,7 @@ namespace Highlighter
         internal const string _classificationTypeNameDelete = "Comment.Delete";
         internal const string _classificationTypeNameWip = "Comment.Wip";
         internal const string _classificationTypeNameWorkaround = "Comment.Workaround";
+        internal const string _classificationTypeNameCheck = "Comment.Check";
 
         internal enum ColorKeyword {
             SYSTEM,
@@ -33,7 +34,8 @@ namespace Highlighter
             IDEA,
             DELETE,
             WIP,
-            WORKAROUND
+            WORKAROUND,
+            CHECK
         }
 
         private static readonly Dictionary<ColorKeyword, Color> keywordColors = new Dictionary<ColorKeyword, Color>() {
@@ -62,7 +64,9 @@ namespace Highlighter
             //WIP:
             [ColorKeyword.WIP] = Color.FromRgb(255, 214, 179),
             //WORKAROUND:
-            [ColorKeyword.WORKAROUND] = Color.FromRgb(179, 217, 255)
+            [ColorKeyword.WORKAROUND] = Color.FromRgb(179, 217, 255),
+            //CHECK:
+            [ColorKeyword.CHECK] = Color.FromRgb(233, 109, 170)
         };
 
         public static Color ToColor(this ColorKeyword keyword) {
