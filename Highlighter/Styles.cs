@@ -269,4 +269,26 @@ namespace Highlighter
             IsBold = false;
         }
     }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameCheck)]
+    [Name(Consts._classificationTypeNameCheck)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    [Order(After = Priority.Default)]
+    internal sealed class FormatCommentCheck : ClassificationFormatDefinition
+    {
+        public FormatCommentCheck()
+        {
+            DisplayName = "Highlighter - CHECK";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.ColorKeyword.SYSTEM.ToColor();
+            BackgroundColor = Consts.ColorKeyword.CHECK.ToColor();
+            BackgroundCustomizable = true;
+            IsBold = false;
+        }
+    }
 }

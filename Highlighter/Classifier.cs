@@ -22,6 +22,7 @@ namespace Highlighter
         private readonly IClassificationType _comment_Delete;
         private readonly IClassificationType _comment_Wip;
         private readonly IClassificationType _comment_Workaround;
+        private readonly IClassificationType _comment_Check;
         private readonly string _pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
         private bool _isClassificationRunning;
 
@@ -42,6 +43,7 @@ namespace Highlighter
             _comment_Delete = registry.GetClassificationType(Consts._classificationTypeNameDelete);
             _comment_Wip = registry.GetClassificationType(Consts._classificationTypeNameWip);
             _comment_Workaround = registry.GetClassificationType(Consts._classificationTypeNameWorkaround);
+            _comment_Check = registry.GetClassificationType(Consts._classificationTypeNameCheck);
         }
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
@@ -183,6 +185,9 @@ namespace Highlighter
 
                 case "workaround":
                     return _comment_Workaround;
+
+                case "check":
+                    return _comment_Check;
 
                 default:
                     return null;
