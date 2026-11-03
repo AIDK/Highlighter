@@ -7,7 +7,7 @@ namespace Highlighter
 {
     [Export(typeof(IClassifierProvider))]
     [ContentType("CSharp"), ContentType("C/C++")]
-    [ContentType("JavaScript"), ContentType("JScript"), ContentType("TypeScript")]
+    [ContentType("JavaScript"), ContentType("TypeScript")]
     internal sealed class Provider : IClassifierProvider
     {
         [Import]
