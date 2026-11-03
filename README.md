@@ -2,7 +2,7 @@
 
 ![GitHub release](https://img.shields.io/github/v/release/AIDK/Highlighter?color=009dff) [![GitHub license](https://img.shields.io/badge/license-GNU-blue.svg)](https://github.com/AIDK/Highlighter/blob/main/LICENSE.txt)
 
-A Visual Studio extension for C# and C/C++ that highlights keywords in comments, so they stand out while you work.
+A Visual Studio extension for C#, C/C++, JavaScript and TypeScript that highlights keywords in comments, so they stand out while you work.
 
 Works with **Visual Studio 2019, 2022 and 2026** (Community, Professional and Enterprise).
 
